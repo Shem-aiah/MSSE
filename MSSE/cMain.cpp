@@ -18,7 +18,7 @@ cMain::cMain() : wxFrame(nullptr, wxID_ANY, "Mine Sweeper - SIN.version!", wxPoi
 			grid->Add(btn[y * nFieldWidth + x], 1, wxEXPAND | wxALL);
 
 			btn[y * nFieldWidth + x]->Bind(wxEVT_COMMAND_BUTTON_CLICKED, &cMain::OnButtonClicked, this);
-			mineField[nFieldWidth + x] = 0;
+			mineField[y * nFieldWidth + x] = 0;
 		}
 	}
 
